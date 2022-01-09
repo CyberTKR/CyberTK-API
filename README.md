@@ -19,7 +19,7 @@ api = API(apiKey,version)
 ####### APPNAME + USERAGENT #######
 
 res = api._appuseragent("chrome") # ANDROID, CHROME
-print(json.dumps(res, indent=4))
+api.GoodPrint(res)
 
 ##########################
 ```
@@ -36,7 +36,7 @@ api = API(apiKey,version)
 ####### APPRANDOM #######
 
 res = api._apprandom()
-print(json.dumps(res, indent=4))
+api.GoodPrint(res)
 
 ##########################
 ```
@@ -53,7 +53,7 @@ api = API(apiKey,version)
 ####### WEATHER-API #######
 
 res = api._weatherapi('netherlands')
-print(json.dumps(res, indent=4))
+api.GoodPrint(res)
 
 ##########################
 ```
@@ -70,7 +70,7 @@ api = API(apiKey,version)
 ####### INSTAGRAM-SEARCH-USER-API #######
 
 res = api._instaprofile('_aquariusman')
-print(json.dumps(res, indent=4))
+api.GoodPrint(res)
 
 ##########################
 ```
@@ -107,7 +107,7 @@ api = API(apiKey,version)
 ####### COVID19-API #######
 
 res = api._covid19('tr').json()
-print(json.dumps(res, indent=4))
+api.GoodPrint(res)
 
 ##########################
 ```
@@ -125,7 +125,7 @@ api = API(apiKey,version)
 ####### TIKTOK-SEARCH-USER-API #######
 
 res = api._tiktoksearch('username').json()
-print(json.dumps(res, indent=4))
+api.GoodPrint(res)
 
 ##########################
 ```
