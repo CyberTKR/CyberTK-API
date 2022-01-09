@@ -1,4 +1,4 @@
-import http,json
+import httpx,json
 
 
 class API():
@@ -11,7 +11,7 @@ class API():
           "ApiKey": self.api_key,
           "API-Version": self.api_version
         }
-
+        
     def GoodPrint(self,jsonpack):
         print(json.dumps(jsonpack, indent=4))
         
@@ -40,5 +40,5 @@ class API():
         return istek
       
     def _tiktoksearch(self,username):
-        istek = self._get.post(self._h +"/"+self.api_version+"/tiktokapi++?Parameters="+username,headers=self.headers)
+        istek = self._get.post(self._h +"/"+self.api_version+"/tiktokapi?Parameters="+username,headers=self.headers)
         return istek
