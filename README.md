@@ -1,4 +1,4 @@
-## Starter ##
+## REQUIREDMENT ##
 ```PY
 pip3 install httpx && pip3 install httpx[http2]
 
@@ -10,6 +10,11 @@ Or: python3 setup.py install
 ```PY
 from CyberTKAPI import API
 import requests,json
+
+apiKey = ""
+version = "v1-beta"
+
+api = API(apiKey,version)
 
 ####### APPNAME + USERAGENT #######
 
@@ -23,6 +28,11 @@ print(json.dumps(res, indent=4))
 from CyberTKAPI import API
 import requests,json
 
+apiKey = ""
+version = "v1-beta"
+
+api = API(apiKey,version)
+
 ####### APPRANDOM #######
 
 res = api._apprandom()
@@ -34,6 +44,11 @@ print(json.dumps(res, indent=4))
 ```PY
 from CyberTKAPI import API
 import requests,json
+
+apiKey = ""
+version = "v1-beta"
+
+api = API(apiKey,version)
 
 ####### WEATHER-API #######
 
@@ -47,6 +62,11 @@ print(json.dumps(res, indent=4))
 from CyberTKAPI import API
 import requests,json
 
+apiKey = ""
+version = "v1-beta"
+
+api = API(apiKey,version)
+
 ####### INSTAGRAM-SEARCH-USER-API #######
 
 res = api._instaprofile('_aquariusman')
@@ -58,6 +78,11 @@ print(json.dumps(res, indent=4))
 ```PY
 from CyberTKAPI import API
 import requests,json
+
+apiKey = ""
+version = "v1-beta"
+
+api = API(apiKey,version)
 
 ####### SCREEN-SHOTWEB-API #######
 
@@ -74,6 +99,11 @@ file.close()
 from CyberTKAPI import API
 import requests,json
 
+apiKey = ""
+version = "v1-beta"
+
+api = API(apiKey,version)
+
 ####### COVID19-API #######
 
 res = api._covid19('tr').json()
@@ -86,6 +116,11 @@ print(json.dumps(res, indent=4))
 ```PY
 from CyberTKAPI import API
 import requests,json
+
+apiKey = ""
+version = "v1-beta"
+
+api = API(apiKey,version)
 
 ####### TIKTOK-SEARCH-USER-API #######
 
