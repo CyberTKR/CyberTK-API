@@ -1,4 +1,4 @@
-import httpx
+import http,json
 
 
 class API():
@@ -12,6 +12,9 @@ class API():
           "API-Version": self.api_version
         }
 
+    def GoodPrint(self,jsonpack):
+        print(json.dumps(jsonpack, indent=4))
+        
     def _appuseragent(self,App):
         istek = self._get.post(self._h +"/"+self.api_version+"/appname?App="+App,headers=self.headers).json()
         return istek
