@@ -14,12 +14,12 @@ import requests,json
 apiKey = ""
 version = "v1-beta"
 
-api = API(apiKey,version)
+_a = API(apiKey,version)
 
 ####### APPNAME + USERAGENT #######
 
-res = api._appuseragent("chrome") # ANDROID, CHROME
-api.GoodPrint(res)
+_r = api._appuseragent("chrome") # ANDROID, CHROME
+_a.GoodPrint(_r)
 
 ##########################
 ```
@@ -31,12 +31,12 @@ import requests,json
 apiKey = ""
 version = "v1-beta"
 
-api = API(apiKey,version)
+_a = API(apiKey,version)
 
 ####### APPRANDOM #######
 
-res = api._apprandom()
-api.GoodPrint(res)
+_r = _a._apprandom()
+_a.GoodPrint(_r)
 
 ##########################
 ```
@@ -48,12 +48,12 @@ import requests,json
 apiKey = ""
 version = "v1-beta"
 
-api = API(apiKey,version)
+_a = API(apiKey,version)
 
 ####### WEATHER-API #######
 
-res = api._weatherapi('netherlands')
-api.GoodPrint(res)
+_r = _a._weatherapi('netherlands')
+_a.GoodPrint(_r)
 
 ##########################
 ```
@@ -65,12 +65,12 @@ import requests,json
 apiKey = ""
 version = "v1-beta"
 
-api = API(apiKey,version)
+_a = API(apiKey,version)
 
 ####### INSTAGRAM-SEARCH-USER-API #######
 
-res = api._instaprofile('_aquariusman')
-api.GoodPrint(res)
+_r = _a._instaprofile('_aquariusman')
+_a.GoodPrint(_r)
 
 ##########################
 ```
@@ -84,13 +84,13 @@ import string
 apiKey = ""
 version = "v1-beta"
 
-api = API(apiKey,version)
+_a = API(apiKey,version)
 
 ####### SCREEN-SHOTWEB-API #######
 
-res = api._screenShotWeb('http://github.com/CyberTKR')
+_r = _a._screenShotWeb('http://github.com/CyberTKR')
 file = open(f"{''.join(random.choices(string.ascii_lowercase, k=10))}.png", "wb")
-file.write(res.content)
+file.write(_r.content)
 file.close()
 
 ##########################
@@ -104,12 +104,12 @@ import requests,json
 apiKey = ""
 version = "v1-beta"
 
-api = API(apiKey,version)
+_a = API(apiKey,version)
 
 ####### COVID19-API #######
 
-res = api._covid19('tr').json()
-api.GoodPrint(res)
+_r = _a._covid19('tr').json()
+_a.GoodPrint(_r)
 
 ##########################
 ```
@@ -122,12 +122,12 @@ import requests,json
 apiKey = ""
 version = "v1-beta"
 
-api = API(apiKey,version)
+_a = API(apiKey,version)
 
 ####### TIKTOK-SEARCH-USER-API #######
 
-res = api._tiktoksearch('username').json()
-api.GoodPrint(res)
+_r = api._tiktoksearch('username').json()
+_a.GoodPrint(_r)
 
 ##########################
 ```
