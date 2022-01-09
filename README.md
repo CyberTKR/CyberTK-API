@@ -78,6 +78,8 @@ api.GoodPrint(res)
 ```PY
 from CyberTKAPI import API
 import requests,json
+import random
+import string
 
 apiKey = ""
 version = "v1-beta"
