@@ -1,4 +1,4 @@
-## REQUIREDMENT ##
+## Starter ##
 ```PY
 pip3 install httpx && pip3 install httpx[http2]
 
