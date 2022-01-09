@@ -126,7 +126,7 @@ _a = API(apiKey,version)
 
 ####### TIKTOK-SEARCH-USER-API #######
 
-_r = api._tiktoksearch('username').json()
+_r = _a._tiktoksearch('username').json()
 _a.GoodPrint(_r)
 
 ##########################
