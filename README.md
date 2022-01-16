@@ -7,7 +7,7 @@ Or: python3 setup.py install
 
 
 - Special => LikePost WebAPI: 250:500:1000:3000 
-- https://app.cybertkr.com/v1-beta/LikePost
+- https://app.cybertkr.com/v-1/LikePost
 
 - Example To Use
 
@@ -33,7 +33,7 @@ from CyberTKAPI import API
 import requests,json
 
 apiKey = ""
-version = "v1-beta"
+version = "v-1"
 
 _a = API(apiKey,version)
 
@@ -50,7 +50,7 @@ from CyberTKAPI import API
 import requests,json
 
 apiKey = ""
-version = "v1-beta"
+version = "v-1"
 
 _a = API(apiKey,version)
 
@@ -67,7 +67,7 @@ from CyberTKAPI import API
 import requests,json
 
 apiKey = ""
-version = "v1-beta"
+version = "v-1"
 
 _a = API(apiKey,version)
 
@@ -86,7 +86,7 @@ import random
 import string
 
 apiKey = ""
-version = "v1-beta"
+version = "v-1"
 
 _a = API(apiKey,version)
 
@@ -106,7 +106,7 @@ from CyberTKAPI import API
 import requests,json
 
 apiKey = ""
-version = "v1-beta"
+version = "v-1"
 
 _a = API(apiKey,version)
 
@@ -124,7 +124,7 @@ from CyberTKAPI import API
 import requests,json
 
 apiKey = ""
-version = "v1-beta"
+version = "v-1"
 
 _a = API(apiKey,version)
 
@@ -135,7 +135,7 @@ _a.GoodPrint(_r)
 
 ##########################
 ```
-LAST UPDATE: 09/01/2022
+LAST UPDATE: 16/01/2022
 
 
 LICENSE: Buying me a coffee ☕ or tea 🍵 🥺👈
