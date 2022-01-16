@@ -3,7 +3,7 @@ import httpx,json
 
 class API():
     def __init__(self,ApiKey,Version):
-        self._h = "https://www.api.cybertkr.com"
+        self._h = "https://app.cybertkr.com"
         self._get = httpx.Client(http2=True,timeout=120)
         self.api_key = ApiKey
         self.api_version = Version
