@@ -6,6 +6,8 @@ Or: python3 setup.py install
 ```
 
 - Example To Use
+- Special => LikePost WebAPI: 250:500:1000:3000 
+- https://app.cybertkr.com/v1-beta/LikePost
 
 ```PY
 from CyberTKAPI import API
