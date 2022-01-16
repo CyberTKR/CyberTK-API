@@ -16,7 +16,7 @@ from CyberTKAPI import API
 import requests,json
 
 apiKey = ""
-version = "v1-beta"
+version = "v-1"
 
 _a = API(apiKey,version)
 
