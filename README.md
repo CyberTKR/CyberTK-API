@@ -5,9 +5,11 @@ pip3 install httpx && pip3 install httpx[http2]
 Or: python3 setup.py install
 ```
 
-- Example To Use
+
 - Special => LikePost WebAPI: 250:500:1000:3000 
 - https://app.cybertkr.com/v1-beta/LikePost
+
+- Example To Use
 
 ```PY
 from CyberTKAPI import API
