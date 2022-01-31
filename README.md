@@ -134,7 +134,9 @@ _r = _a._tiktoksearch('username').json()
 _a.GoodPrint(_r)
 
 ##########################
+```
 
+```PY
 ####### LINEQR #######
 
 import requests
@@ -156,9 +158,11 @@ while True:
 	else:pass;break
 
 ##########################
+```
+
 
   
-```
+
 LAST UPDATE: 16/01/2022
 
 
