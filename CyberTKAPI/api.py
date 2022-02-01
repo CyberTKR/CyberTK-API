@@ -2,7 +2,7 @@ E='UserAgent'
 D='AppName'
 A='/'
 import httpx,json as C
-class B:
+class API:
 	def __init__(A,ApiKey,Version):A._h='https://app.cybertkr.com';A._get=httpx.Client(http2=True,timeout=120);A.api_key=ApiKey;A.api_version=Version;A.headers={'ApiKey':A.api_key,'API-Version':A.api_version}
 	def GoodPrint(A,jsonpack):print(C.dumps(jsonpack,indent=4))
 	def _appuseragent(B,App):C=B._get.post(B._h+A+B.api_version+'/appname?App='+App,headers=B.headers).json();return C
