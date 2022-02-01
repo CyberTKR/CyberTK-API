@@ -186,7 +186,8 @@ else:
 LAST UPDATE: 16/01/2022
 
 
-LICENSE: Buying me a coffee ☕ or tea 🍵 🥺👈
+LICENSE: Free;
+ApiKey ?: LosAngeles
 
 - 💼 Email, [email](mailto:tolgkr@cybertkr.com) ☕
 - 💼 Whatsaap, [link](https://api.whatsapp.com/send?phone=31686208125)☕
