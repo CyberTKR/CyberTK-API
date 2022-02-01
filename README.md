@@ -15,7 +15,7 @@ Or: python3 setup.py install
 from CyberTKAPI.api import API
 import requests,json
 
-apiKey = ""
+apiKey = "LosAngeles"
 version = "v-1"
 
 _a = API(apiKey,version)
@@ -32,7 +32,7 @@ _a.GoodPrint(_r)
 from CyberTKAPI.api import API
 import requests,json
 
-apiKey = ""
+apiKey = "LosAngeles"
 version = "v-1"
 
 _a = API(apiKey,version)
@@ -49,7 +49,7 @@ _a.GoodPrint(_r)
 from CyberTKAPI.api import API
 import requests,json
 
-apiKey = ""
+apiKey = "LosAngeles"
 version = "v-1"
 
 _a = API(apiKey,version)
@@ -66,7 +66,7 @@ _a.GoodPrint(_r)
 from CyberTKAPI.api import API
 import requests,json
 
-apiKey = ""
+apiKey = "LosAngeles"
 version = "v-1"
 
 _a = API(apiKey,version)
@@ -85,7 +85,7 @@ import requests,json
 import random
 import string
 
-apiKey = ""
+apiKey = "LosAngeles"
 version = "v-1"
 
 _a = API(apiKey,version)
@@ -105,7 +105,7 @@ file.close()
 from CyberTKAPI.api import API
 import requests,json
 
-apiKey = ""
+apiKey = "LosAngeles"
 version = "v-1"
 
 _a = API(apiKey,version)
@@ -123,7 +123,7 @@ _a.GoodPrint(_r)
 from CyberTKAPI.api import API
 import requests,json
 
-apiKey = ""
+apiKey = "LosAngeles"
 version = "v-1"
 
 _a = API(apiKey,version)
@@ -141,7 +141,7 @@ _a.GoodPrint(_r)
 from CyberTKAPI.api import API
 import requests,json
 
-apiKey = ""
+apiKey = "LosAngeles"
 version = "v-1"
 
 a = API(apiKey,version)
