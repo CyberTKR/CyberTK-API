@@ -156,7 +156,8 @@ a.GoodPrint(_q)
 _p = a._linepin(_q['Key'],_q['Session'],_app,_uagnt)
 
 if _p["Pincode"]:
-  print(f'Pin: {_p["Pincode"]}')
+  _ur = "\n"
+  print(f'{_ur * 1}Pin: {_p["Pincode"]}{_ur * 1}')
   _a = a._lineauthToken(_q['Key'],_q['Session'],_app,_uagnt)
   if _a["authToken"]:
       PrettyPrint = """
