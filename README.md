@@ -12,7 +12,7 @@ Or: python3 setup.py install
 - Example To Use
 
 ```PY
-from CyberTKAPI import API
+from CyberTKAPI.api import API
 import requests,json
 
 apiKey = ""
@@ -29,7 +29,7 @@ _a.GoodPrint(_r)
 ```
 
 ```PY
-from CyberTKAPI import API
+from CyberTKAPI.api import API
 import requests,json
 
 apiKey = ""
@@ -46,7 +46,7 @@ _a.GoodPrint(_r)
 ```
 
 ```PY
-from CyberTKAPI import API
+from CyberTKAPI.api import API
 import requests,json
 
 apiKey = ""
@@ -63,7 +63,7 @@ _a.GoodPrint(_r)
 ```
 
 ```PY
-from CyberTKAPI import API
+from CyberTKAPI.api import API
 import requests,json
 
 apiKey = ""
@@ -80,7 +80,7 @@ _a.GoodPrint(_r)
 ```
 
 ```PY
-from CyberTKAPI import API
+from CyberTKAPI.api import API
 import requests,json
 import random
 import string
@@ -102,7 +102,7 @@ file.close()
 
 
 ```PY
-from CyberTKAPI import API
+from CyberTKAPI.api import API
 import requests,json
 
 apiKey = ""
@@ -120,7 +120,7 @@ _a.GoodPrint(_r)
 
 
 ```PY
-from CyberTKAPI import API
+from CyberTKAPI.api import API
 import requests,json
 
 apiKey = ""
@@ -138,7 +138,7 @@ _a.GoodPrint(_r)
 
 ```PY
 ####### LINEQR #######
-from CyberTKAPI import API
+from CyberTKAPI.api import API
 import requests,json
 
 apiKey = ""
