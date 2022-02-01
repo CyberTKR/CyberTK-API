@@ -164,20 +164,20 @@ if _p["Pincode"]:
 
       qrCode-API v-1
 
-Certificate: {}
+Pincode: {}
 IP: {}
 Key: {}
-Pincode: {}
-QR: {}
+X-Line-Application: {}
 QrImage: {}
 Session: {}
+Certificate: {}
 authToken: {}
+User-Agent: {}
+QR: {}
 """
-      print(PrettyPrint.format(_a["Certificate"],_a["IP"],_a["Key"],_a["Pincode"],_a["QR"],_a["QrImage"],_a["Session"],_a["authToken"]))
+      print(PrettyPrint.format(_a["Pincode"],_a["IP"],_a["Key"],_a["X-Line-Application"],_a["QrImage"],_a["Session"],_a["Certificate"],_a["authToken"],_a["User-Agent"],_a["QR"]))
 else:
     print("Zaman Doldu. !")
-
-##########################
 ```
 
 
