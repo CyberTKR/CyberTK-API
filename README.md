@@ -138,24 +138,43 @@ _a.GoodPrint(_r)
 
 ```PY
 ####### LINEQR #######
+from CyberTKAPI import API
+import requests,json
 
-import requests
-import json,time,pyqrcode
-_H = {
-  "ApiKey": "",
-  'API-Version': "v-1",
-  "AppName": "CHROMEOS\t2.5.0\tChrome OS\t1",
-  "UserAgent": "Mozilla/5.0 (X11; CrOS x86_64 14268.67.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.111 Safari/537.36"
-}
-url='https://app.cybertkr.com/v-1/qrCode'
-_d=json.loads(requests.session().post(url,headers=_H).text)
-print(json.dumps(_d,indent=4))
-_t=time.time()
-while True:
-	_p='https://app.cybertkr.com/v-1/GetResult/{}'.format(_d['Key']);_pd=json.loads(requests.session().post(_p).text);print('Giris yapilmasi bekleniyor.!');time.sleep(5)
-	if time.time()-_t<int(30):
-		if _pd['Pincode']!='':print('**********************\n\nPincode: {}\n\n**********************'.format(_pd['Pincode']));time.sleep(10);_pd=json.loads(requests.session().post(_p).text);print(json.dumps(_pd,indent=4));break
-	else:pass;break
+apiKey = ""
+version = "v-1"
+
+a = API(apiKey,version)
+
+_app = "CHROMEOS\t2.5.0\tChrome OS\t1"
+_uagnt ="Mozilla/5.0 (X11; CrOS x86_64 14268.67.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.111 Safari/537.36"
+
+
+_q = a._lineqr(_app,_uagnt)
+a.GoodPrint(_q)
+
+_p = a._linepin(_q['Key'],_q['Session'],_app,_uagnt)
+
+if _p["Pincode"]:
+  print(f'Pin: {_p["Pincode"]}')
+  _a = a._lineauthToken(_q['Key'],_q['Session'],_app,_uagnt)
+  if _a["authToken"]:
+      PrettyPrint = """
+
+      qrCode-API v-1
+
+Certificate: {}
+IP: {}
+Key: {}
+Pincode: {}
+QR: {}
+QrImage: {}
+Session: {}
+authToken: {}
+"""
+      print(PrettyPrint.format(_a["Certificate"],_a["IP"],_a["Key"],_a["Pincode"],_a["QR"],_a["QrImage"],_a["Session"],_a["authToken"]))
+else:
+    print("Zaman Doldu. !")
 
 ##########################
 ```
