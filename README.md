@@ -185,12 +185,12 @@ else:
 
   
 
-LAST UPDATE: 16/01/2022
+LAST UPDATE: 03/02/2022
 
 
-LICENSE: Free;
-ApiKey ?: LosAngeles
-✏️ Bug Report Line ID: cybertk0 
+- LICENSE: Free;
+- ApiKey ?: LosAngeles
+- ✏️ Bug Report Line ID: cybertk0 
 
 - 💼 Email, [email](mailto:tolgkr@cybertkr.com) ☕
 - 💼 Whatsaap, [link](https://api.whatsapp.com/send?phone=31686208125)☕
