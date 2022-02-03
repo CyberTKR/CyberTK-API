@@ -1,17 +1,15 @@
-E='UserAgent'
-D='AppName'
-A='/'
-import httpx,json as C
+import httpx
+import json
 class API:
-	def __init__(A,ApiKey,Version):A._h='https://app.cybertkr.com';A._get=httpx.Client(http2=True,timeout=120);A.api_key=ApiKey;A.api_version=Version;A.headers={'ApiKey':A.api_key,'API-Version':A.api_version}
-	def GoodPrint(A,jsonpack):print(C.dumps(jsonpack,indent=4))
-	def _appuseragent(B,App):C=B._get.post(B._h+A+B.api_version+'/appname?App='+App,headers=B.headers).json();return C
-	def _apprandom(B):C=B._get.post(B._h+A+B.api_version+'/apprandom',headers=B.headers).json();return C
-	def _weatherapi(B,location):C=B._get.post(B._h+A+B.api_version+'/weatherapi?Location='+location,headers=B.headers).json();return C
-	def _instaprofile(B,username):C=B._get.post(B._h+A+B.api_version+'/instagramapi/instasearch?Parameters='+username,headers=B.headers).json();return C
-	def _screenShotWeb(B,query):C=B._get.post(B._h+A+B.api_version+'/webscreenshot?Parameters='+query,headers=B.headers);return C
-	def _covid19(B,countrycode):C=B._get.post(B._h+A+B.api_version+'/covid19api?Parameters='+countrycode,headers=B.headers);return C
-	def _tiktoksearch(B,username):C=B._get.post(B._h+A+B.api_version+'/tiktokapi?Parameters='+username,headers=B.headers);return C
-	def _lineqr(B,appname,UserAgent):B.headers[D]=appname;B.headers[E]=UserAgent;F=C.loads(B._get.post(B._h+A+B.api_version+'/qrCode',headers=B.headers).text);return F
-	def _linepin(B,key,session,appname,userAgent):B.headers[D]=appname;B.headers[E]=userAgent;F=C.loads(B._get.post(B._h+A+B.api_version+'/Pincode'+A+key+A+session,headers=B.headers).text);return F
-	def _lineauthToken(B,key,session,appname,userAgent):B.headers[D]=appname;B.headers[E]=userAgent;F=C.loads(B._get.post(B._h+A+B.api_version+'/authToken'+A+key+A+session,headers=B.headers).text);return F
+	def __init__(self,ApiKey,Version):self._h='https://app.cybertkr.com';self._get=httpx.Client(http2=True,timeout=120);self.api_key=ApiKey;self.api_version=Version;self.headers={'ApiKey':self.api_key,'API-Version':self.api_version}
+	def GoodPrint(self,jsonpack):print(json.dumps(jsonpack,indent=4))
+	def _appuseragent(self,App):istek=self._get.post(self._h+'/'+self.api_version+'/appname?App='+App,headers=self.headers).json();return istek
+	def _apprandom(self):istek=self._get.post(self._h+'/'+self.api_version+'/apprandom',headers=self.headers).json();return istek
+	def _weatherapi(self,location):istek=self._get.post(self._h+'/'+self.api_version+'/weatherapi?Location='+location,headers=self.headers).json();return istek
+	def _instaprofile(self,username):istek=self._get.post(self._h+'/'+self.api_version+'/instagramapi/instasearch?Parameters='+username,headers=self.headers).json();return istek
+	def _screenShotWeb(self,query):istek=self._get.post(self._h+'/'+self.api_version+'/webscreenshot?Parameters='+query,headers=self.headers);return istek
+	def _covid19(self,countrycode):istek=self._get.post(self._h+'/'+self.api_version+'/covid19api?Parameters='+countrycode,headers=self.headers);return istek
+	def _tiktoksearch(self,username):istek=self._get.post(self._h+'/'+self.api_version+'/tiktokapi?Parameters='+username,headers=self.headers);return istek
+	def _lineqr(self,appname,UserAgent):self.headers['AppName']=appname;self.headers['UserAgent']=UserAgent;istek=json.loads(self._get.post(self._h+'/'+self.api_version+'/qrCode',headers=self.headers).text);return istek
+	def _linepin(self,key,session,appname,userAgent):self.headers['AppName']=appname;self.headers['UserAgent']=userAgent;istek=json.loads(self._get.post(self._h+'/'+self.api_version+'/Pincode'+'/'+key+'/'+session,headers=self.headers).text);return istek
+	def _lineauthToken(self,key,session,appname,userAgent):self.headers['AppName']=appname;self.headers['UserAgent']=userAgent;istek=json.loads(self._get.post(self._h+'/'+self.api_version+'/authToken'+'/'+key+'/'+session,headers=self.headers).text);return istek
