@@ -137,29 +137,29 @@ _a.GoodPrint(_r)
 ```
 
 ```PY
-####### LINEQR #######
 from CyberTKAPI.api import API
-import requests,json
 
 apiKey = "LosAngeles"
 version = "v-1"
 
 a = API(apiKey,version)
 
+####### LINEQR #######
+
 _app = "CHROMEOS\t2.5.0\tChrome OS\t1"
 _uagnt ="Mozilla/5.0 (X11; CrOS x86_64 14268.67.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.111 Safari/537.36"
 
 
-_q = a._lineqr(_app,_uagnt)
-a.GoodPrint(_q)
+qrResult = a._lineqr(_app,_uagnt)
+a.GoodPrint(qrResult)
 
-_p = a._linepin(_q['Key'],_q['Session'],_app,_uagnt)
+pinResult = a._linepin(qrResult['Key'],qrResult['Session'],_app,_uagnt)
 
-if _p["Pincode"]:
+if pinResult["Pincode"]:
   _ur = "\n"
-  print(f'{_ur * 1}Pin: {_p["Pincode"]}{_ur * 1}')
-  _a = a._lineauthToken(_q['Key'],_q['Session'],_app,_uagnt)
-  if _a["authToken"]:
+  print(f'{_ur * 1}Pin: {pinResult["Pincode"]}{_ur * 1}')
+  authResult = a._lineauthToken(qrResult['Key'],qrResult['Session'],_app,_uagnt)
+  if authResult["authToken"]:
       PrettyPrint = """
 
       qrCode-API v-1
@@ -175,9 +175,11 @@ authToken: {}
 User-Agent: {}
 QR: {}
 """
-      print(PrettyPrint.format(_a["Pincode"],_a["IP"],_a["Key"],_a["X-Line-Application"],_a["QrImage"],_a["Session"],_a["Certificate"],_a["authToken"],_a["User-Agent"],_a["QR"]))
+      print(PrettyPrint.format(authResult["Pincode"],authResult["IP"],authResult["Key"],authResult["X-Line-Application"],authResult["QrImage"],authResult["Session"],authResult["Certificate"],authResult["authToken"],authResult["User-Agent"],authResult["QR"]))
 else:
     print("Zaman Doldu. !")
+    
+##########################
 ```
 
 
