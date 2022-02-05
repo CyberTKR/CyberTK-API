@@ -180,6 +180,30 @@ else:
     print("Zaman Doldu. !")
     
 ##########################
+
+
+####### LINEQR-IMAGE SELFBOT #######
+
+from CyberTKAPI.api import API
+
+_app = "CHROMEOS\t2.5.0\tChrome OS\t1"
+_uagnt ="Mozilla/5.0 (X11; CrOS x86_64 14268.67.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.111 Safari/537.36"
+
+apiKey = "LosAngeles"
+version = "v-1"
+
+a = API(apiKey,version)
+qrResult = a._lineqr(_app,_uagnt)
+print(f'QRCode Image: {qrResult["QrImage"]}')
+print(f'QR: {qrResult["QR"]}')
+pinResult = a._linepin(qrResult['Key'],qrResult['Session'],_app,_uagnt)
+print(f'Pincode: {pinResult["Pincode"]}')
+authResult = a._lineauthToken(qrResult['Key'],qrResult['Session'],_app,_uagnt)
+authToken,certificate = authResult["authToken"],authResult["Certificate"]
+print(f'authToken: {authToken}')
+print(f'Certificate: {certificate}')
+    
+##########################
 ```
 
 
