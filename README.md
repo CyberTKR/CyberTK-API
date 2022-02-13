@@ -220,6 +220,8 @@ LAST UPDATE: 03/02/2022
 - 💼 Whatsaap, [link](https://api.whatsapp.com/send?phone=31686208125)☕
 
 <a href="https://www.buymeacoffee.com/cybertkr" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" width="150" ></a>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -227,9 +229,9 @@ LAST UPDATE: 03/02/2022
 <body>
 <form action="https://www.paypal.com/donate" method="post" target="_top">
 <input type="hidden" name="hosted_button_id" value="NCG8MBK6KTGUC" />
-<input type="image" src="https://www.paypalobjects.com/en_US/US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Doneren met PayPal-knop" />
+<input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Doneren met PayPal-knop" />
 <img alt="" border="0" src="https://www.paypal.com/nl_NL/i/scr/pixel.gif" width="1" height="1" />
 </form>
+
 </body>
 </html>
-
