@@ -11,12 +11,12 @@ Or: python3 setup.py install
 
 - Example To Use
 
-> Please do not enter different url addresses to connect, otherwise your ip address will be banned.
+> Please do not enter different url addresses to connect, otherwise your ip address will be banned for 2 minutes.
 
-> For example;
-> Like this
+> Like this;
 
 > https://app.cybertkr.com/dawdawd
+
 
 
 
