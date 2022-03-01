@@ -18,43 +18,43 @@ class API:
 
     def _appuseragent(self, 
                       App):
-        istek = self._get.post(self._h + '/' + self.api_version
+        istek = self._get.post(self._h + '/api/' + self.api_version
                                + '/appname?App=' + App,
                                headers=self.headers).json()
         return istek
 
     def _apprandom(self):
-        istek = self._get.post(self._h + '/' + self.api_version
+        istek = self._get.post(self._h + '/api/' + self.api_version
                                + '/apprandom',
                                headers=self.headers).json()
         return istek
 
     def _weatherapi(self, location):
-        istek = self._get.post(self._h + '/' + self.api_version
+        istek = self._get.post(self._h + '/api/' + self.api_version
                                + '/weatherapi?Location=' + location,
                                headers=self.headers).json()
         return istek
 
     def _instaprofile(self, username):
-        istek = self._get.post(self._h + '/' + self.api_version
+        istek = self._get.post(self._h + '/api/' + self.api_version
                                + '/instagramapi/instasearch?Parameters='
                                 + username, headers=self.headers).json()
         return istek
 
     def _screenShotWeb(self, query):
-        istek = self._get.post(self._h + '/' + self.api_version
+        istek = self._get.post(self._h + '/api/' + self.api_version
                                + '/webscreenshot?Parameters=' + query,
                                headers=self.headers)
         return istek
 
     def _covid19(self, countrycode):
-        istek = self._get.post(self._h + '/' + self.api_version
+        istek = self._get.post(self._h + '/api/' + self.api_version
                                + '/covid19api?Parameters='
                                + countrycode, headers=self.headers)
         return istek
 
     def _tiktoksearch(self, username):
-        istek = self._get.post(self._h + '/' + self.api_version
+        istek = self._get.post(self._h + '/api/' + self.api_version
                                + '/tiktokapi?Parameters=' + username,
                                headers=self.headers)
         return istek
@@ -62,7 +62,7 @@ class API:
     def _lineqr(self, appname, UserAgent):
         self.headers['AppName'] = appname
         self.headers['UserAgent'] = UserAgent
-        istek = json.loads(self._get.post(self._h + '/'
+        istek = json.loads(self._get.post(self._h + '/api/'
                            + self.api_version + '/qrCode',
                            headers=self.headers).text)
         return istek
@@ -76,9 +76,9 @@ class API:
         ):
         self.headers['AppName'] = appname
         self.headers['UserAgent'] = userAgent
-        istek = json.loads(self._get.post(self._h + '/'
-                           + self.api_version + '/Pincode' + '/' + key
-                           + '/' + session, headers=self.headers).text)
+        istek = json.loads(self._get.post(self._h + '/api/'
+                           + self.api_version + '/Pincode' + '/api/' + key
+                           + '/api/' + session, headers=self.headers).text)
         return istek
 
     def _lineauthToken(
@@ -90,8 +90,8 @@ class API:
         ):
         self.headers['AppName'] = appname
         self.headers['UserAgent'] = userAgent
-        istek = json.loads(self._get.post(self._h + '/'
-                           + self.api_version + '/authToken' + '/'
-                           + key + '/' + session,
+        istek = json.loads(self._get.post(self._h + '/api/'
+                           + self.api_version + '/authToken' + '/api/'
+                           + key + '/api/' + session,
                            headers=self.headers).text)
         return istek
