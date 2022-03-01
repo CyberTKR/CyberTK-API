@@ -31,7 +31,7 @@ _a = API(apiKey,version)
 
 ####### APPNAME + USERAGENT #######
 
-_r = _a._appuseragent("chrome") # ANDROID, CHROME
+_r = _a._appuseragent("desktopmac") # ANDROID, CHROME, DESKTOPMAC, DESKTOPWIN
 _a.GoodPrint(_r)
 
 ##########################
