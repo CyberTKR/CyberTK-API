@@ -77,8 +77,8 @@ class API:
         self.headers['AppName'] = appname
         self.headers['UserAgent'] = userAgent
         istek = json.loads(self._get.post(self._h + '/api/'
-                           + self.api_version + '/Pincode' + '/api/' + key
-                           + '/api/' + session, headers=self.headers).text)
+                           + self.api_version + '/Pincode' + '/' + key
+                           + '/' + session, headers=self.headers).text)
         return istek
 
     def _lineauthToken(
@@ -88,10 +88,10 @@ class API:
         appname,
         userAgent,
         ):
-        self.headers['AppName'] =  appname
+        self.headers['AppName'] = appname
         self.headers['UserAgent'] = userAgent
         istek = json.loads(self._get.post(self._h + '/api/'
-                           + self.api_version + '/authToken' + '/api/'
-                           + key + '/api/' + session,
+                           + self.api_version + '/authToken' + '/'
+                           + key + '/' + session,
                            headers=self.headers).text)
         return istek
