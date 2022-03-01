@@ -1,97 +1,227 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-import httpx
-import json
+## REQUIREDMENT ##
+```PY
+pip3 install httpx && pip3 install httpx[http2]
+
+Or: python3 setup.py install
+```
 
 
-class API:
+- Special => LikePost WebAPI: 250:500:1000:3000 
+- https://app.cybertkr.com/v2/LikePost
 
-    def __init__(self, ApiKey, Version):
-        self._h = 'https://app.cybertkr.com'
-        self._get = httpx.Client(http2=True, timeout=120)
-        self.api_key = ApiKey
-        self.api_version = Version
-        self.headers = {'ApiKey': self.api_key,'API-Version': self.api_version}
+- Example To Use
 
-    def GoodPrint(self, jsonpack):
-        print(json.dumps(jsonpack, indent=4,ensure_ascii=False))
+> Please do not enter different url addresses to connect, otherwise your ip address will be banned for 2 minutes.
 
-    def _appuseragent(self, 
-                      App):
-        istek = self._get.post(self._h + '/api/' + self.api_version
-                               + '/appname?App=' + App,
-                               headers=self.headers).json()
-        return istek
+> Like this;
 
-    def _apprandom(self):
-        istek = self._get.post(self._h + '/api/' + self.api_version
-                               + '/apprandom',
-                               headers=self.headers).json()
-        return istek
+> https://app.cybertkr.com/dawdawd
 
-    def _weatherapi(self, location):
-        istek = self._get.post(self._h + '/api/' + self.api_version
-                               + '/weatherapi?Location=' + location,
-                               headers=self.headers).json()
-        return istek
 
-    def _instaprofile(self, username):
-        istek = self._get.post(self._h + '/api/' + self.api_version
-                               + '/instagramapi/instasearch?Parameters='
-                                + username, headers=self.headers).json()
-        return istek
 
-    def _screenShotWeb(self, query):
-        istek = self._get.post(self._h + '/api/' + self.api_version
-                               + '/webscreenshot?Parameters=' + query,
-                               headers=self.headers)
-        return istek
 
-    def _covid19(self, countrycode):
-        istek = self._get.post(self._h + '/api/' + self.api_version
-                               + '/covid19api?Parameters='
-                               + countrycode, headers=self.headers)
-        return istek
+```PY
+from CyberTKAPI.api import API
 
-    def _tiktoksearch(self, username):
-        istek = self._get.post(self._h + '/api/' + self.api_version
-                               + '/tiktokapi?Parameters=' + username,
-                               headers=self.headers)
-        return istek
+apiKey = "LosAngeles"
+version = "v2"
 
-    def _lineqr(self, appname, UserAgent):
-        self.headers['AppName'] = appname
-        self.headers['UserAgent'] = UserAgent
-        istek = json.loads(self._get.post(self._h + '/api/'
-                           + self.api_version + '/qrCode',
-                           headers=self.headers).text)
-        return istek
+_a = API(apiKey,version)
 
-    def _linepin(
-        self,
-        key,
-        session,
-        appname,
-        userAgent,
-        ):
-        self.headers['AppName'] = appname
-        self.headers['UserAgent'] = userAgent
-        istek = json.loads(self._get.post(self._h + '/api/'
-                           + self.api_version + '/Pincode' + '/api/' + key
-                           + '/api/' + session, headers=self.headers).text)
-        return istek
+####### APPNAME + USERAGENT #######
 
-    def _lineauthToken(
-        self,
-        key,
-        session,
-        appname,
-        userAgent,
-        ):
-        self.headers['AppName'] = appname
-        self.headers['UserAgent'] = userAgent
-        istek = json.loads(self._get.post(self._h + '/api/'
-                           + self.api_version + '/authToken' + '/api/'
-                           + key + '/api/' + session,
-                           headers=self.headers).text)
-        return istek
+_r = _a._appuseragent("desktopmac") # ANDROID, CHROME, DESKTOPMAC, DESKTOPWIN
+_a.GoodPrint(_r)
+
+##########################
+```
+
+```PY
+from CyberTKAPI.api import API
+
+apiKey = "LosAngeles"
+version = "v2"
+
+_a = API(apiKey,version)
+
+####### APPRANDOM #######
+
+_r = _a._apprandom()
+_a.GoodPrint(_r)
+
+##########################
+```
+
+```PY
+from CyberTKAPI.api import API
+
+apiKey = "LosAngeles"
+version = "v2"
+
+_a = API(apiKey,version)
+
+####### WEATHER-API #######
+
+_r = _a._weatherapi('netherlands')
+_a.GoodPrint(_r)
+
+##########################
+```
+
+```PY
+from CyberTKAPI.api import API
+
+apiKey = "LosAngeles"
+version = "v2"
+
+_a = API(apiKey,version)
+
+####### INSTAGRAM-SEARCH-USER-API #######
+
+_r = _a._instaprofile('_aquariusman')
+_a.GoodPrint(_r)
+
+##########################
+```
+
+```PY
+from CyberTKAPI.api import API
+import random
+import string
+
+apiKey = "LosAngeles"
+version = "v2"
+
+_a = API(apiKey,version)
+
+####### SCREEN-SHOTWEB-API #######
+
+_r = _a._screenShotWeb('http://github.com/CyberTKR')
+file = open(f"{''.join(random.choices(string.ascii_lowercase, k=10))}.png", "wb")
+file.write(_r.content)
+file.close()
+
+##########################
+```
+
+
+```PY
+from CyberTKAPI.api import API
+import requests,json
+
+apiKey = "LosAngeles"
+version = "v2"
+
+_a = API(apiKey,version)
+
+####### COVID19-API #######
+
+_r = _a._covid19('tr').json()
+_a.GoodPrint(_r)
+
+##########################
+```
+
+
+```PY
+from CyberTKAPI.api import API
+import requests,json
+
+apiKey = "LosAngeles"
+version = "v2"
+
+_a = API(apiKey,version)
+
+####### TIKTOK-SEARCH-USER-API #######
+
+_r = _a._tiktoksearch('username').json()
+_a.GoodPrint(_r)
+
+##########################
+```
+
+```PY
+from CyberTKAPI.api import API
+
+apiKey = "LosAngeles"
+version = "v2"
+
+a = API(apiKey,version)
+
+####### LINEQR #######
+
+_app = "CHROMEOS\t2.5.0\tChrome OS\t1"
+_uagnt ="Mozilla/5.0 (X11; CrOS x86_64 14268.67.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.111 Safari/537.36"
+
+
+qrResult = a._lineqr(_app,_uagnt)
+a.GoodPrint(qrResult)
+
+pinResult = a._linepin(qrResult['Key'],qrResult['Session'],_app,_uagnt)
+
+if pinResult["Pincode"]:
+  _ur = "\n"
+  print(f'{_ur * 1}Pin: {pinResult["Pincode"]}{_ur * 1}')
+  authResult = a._lineauthToken(qrResult['Key'],qrResult['Session'],_app,_uagnt)
+  if authResult["authToken"]:
+      PrettyPrint = """
+
+      qrCode-API v2
+
+Pincode: {}
+IP: {}
+Key: {}
+X-Line-Application: {}
+QrImage: {}
+Session: {}
+Certificate: {}
+authToken: {}
+User-Agent: {}
+QR: {}
+"""
+      print(PrettyPrint.format(authResult["Pincode"],authResult["IP"],authResult["Key"],authResult["X-Line-Application"],authResult["QrImage"],authResult["Session"],authResult["Certificate"],authResult["authToken"],authResult["User-Agent"],authResult["QR"]))
+else:
+    print("Zaman Doldu. !")
+    
+##########################
+
+
+####### LINEQR-IMAGE SELFBOT #######
+
+from CyberTKAPI.api import API
+
+_app = "CHROMEOS\t2.5.0\tChrome OS\t1"
+_uagnt ="Mozilla/5.0 (X11; CrOS x86_64 14268.67.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.111 Safari/537.36"
+
+apiKey = "LosAngeles"
+version = "v2"
+
+a = API(apiKey,version)
+qrResult = a._lineqr(_app,_uagnt)
+print(f'QRCode Image: {qrResult["QrImage"]}')
+print(f'QR: {qrResult["QR"]}')
+pinResult = a._linepin(qrResult['Key'],qrResult['Session'],_app,_uagnt)
+print(f'Pincode: {pinResult["Pincode"]}')
+authResult = a._lineauthToken(qrResult['Key'],qrResult['Session'],_app,_uagnt)
+authToken,certificate = authResult["authToken"],authResult["Certificate"]
+print(f'authToken: {authToken}')
+print(f'Certificate: {certificate}')
+    
+##########################
+```
+
+
+  
+
+LAST UPDATE: 03/02/2022
+
+
+- LICENSE: Free;
+- ApiKey ?: LosAngeles
+- ✏️ Bug Report Line ID: cybertk0 
+
+- 💼 Email, [email](mailto:tolgkr@cybertkr.com) ☕
+- 💼 Whatsaap, [link](https://api.whatsapp.com/send?phone=31686208125)☕
+
+<a href="https://www.buymeacoffee.com/cybertkr" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" width="150" ></a>
+
