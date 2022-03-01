@@ -10,7 +10,7 @@ $ pip3 install --upgrade CyberTKAPI
 
 
 - Special => LikePost WebAPI: 250:500:1000:3000 
-- https://app.cybertkr.com/v2/LikePost
+- https://app.cybertkr.com/api/v2/LikePost
 
 - Example To Use
 
