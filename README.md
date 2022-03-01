@@ -215,7 +215,7 @@ print(f'Certificate: {certificate}')
 
   
 
-LAST UPDATE: 03/02/2022
+LAST UPDATE: 01/03/2022
 
 
 - LICENSE: Free;
