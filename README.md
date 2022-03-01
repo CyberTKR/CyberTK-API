@@ -4,6 +4,8 @@ pip3 install httpx && pip3 install httpx[http2]
 
 pip3 install CyberTKAPI
 
+pip3 install --upgrade CyberTKAPI
+
 ```
 
 
@@ -108,7 +110,6 @@ file.close()
 
 ```PY
 from CyberTKAPI.api import API
-import requests,json
 
 apiKey = "LosAngeles"
 version = "v2"
@@ -126,7 +127,6 @@ _a.GoodPrint(_r)
 
 ```PY
 from CyberTKAPI.api import API
-import requests,json
 
 apiKey = "LosAngeles"
 version = "v2"
