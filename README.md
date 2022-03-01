@@ -4,7 +4,7 @@ pip3 install httpx && pip3 install httpx[http2]
 
 Or: python3 setup.py install
 
-pip3 install CyberTK-API
+pip3 install CyberTKAPI
 ```
 
 
