@@ -88,7 +88,7 @@ class API:
         appname,
         userAgent,
         ):
-        self.headers['AppName'] = appname
+        self.headers['AppName'] =  appname
         self.headers['UserAgent'] = userAgent
         istek = json.loads(self._get.post(self._h + '/api/'
                            + self.api_version + '/authToken' + '/api/'
