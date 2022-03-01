@@ -2,13 +2,13 @@ import os, io
 import sys
 from setuptools import find_packages, setup
 
-isim = "CyberTK-API"
-description = "CyberTK REST API v-1"
+isim = "CyberTKAPI"
+description = "CyberTK REST API v2"
 link = "https://github.com/CyberTKR/CyberTK-API"
 mail = "tolg@cybertkr.com"
 yazar = "CyberTK"
 tavsiye_py_vers = ">=3.6.0"
-version = "1.0"
+version = "2"
 install_Req = ["httpx", "httpx[http2]"]
 if not (sys.version_info.major == 3 and sys.version_info.minor >= 6):
     print("This script requires Python 3.6 or higher!")
