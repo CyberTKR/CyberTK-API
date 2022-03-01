@@ -22,7 +22,6 @@ Or: python3 setup.py install
 
 ```PY
 from CyberTKAPI.api import API
-import requests,json
 
 apiKey = "LosAngeles"
 version = "v-1"
@@ -39,7 +38,6 @@ _a.GoodPrint(_r)
 
 ```PY
 from CyberTKAPI.api import API
-import requests,json
 
 apiKey = "LosAngeles"
 version = "v-1"
@@ -56,7 +54,6 @@ _a.GoodPrint(_r)
 
 ```PY
 from CyberTKAPI.api import API
-import requests,json
 
 apiKey = "LosAngeles"
 version = "v-1"
@@ -73,7 +70,6 @@ _a.GoodPrint(_r)
 
 ```PY
 from CyberTKAPI.api import API
-import requests,json
 
 apiKey = "LosAngeles"
 version = "v-1"
@@ -90,7 +86,6 @@ _a.GoodPrint(_r)
 
 ```PY
 from CyberTKAPI.api import API
-import requests,json
 import random
 import string
 
