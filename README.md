@@ -16,7 +16,7 @@ $ pip3 install --upgrade CyberTKAPI
 
 > Do not use special url routes other than the specified url paths. Otherwise, your ip address will be banned indefinitely.❗
 
-> Belirtilen url yolları dışında özel url yolları kullanmayın. Aksi takdirde ip adresiniz süresiz banlanacaktır.❗
+> Belirtilen url yollari disinda özel url yollari kullanmayiniz. Aksi takdirde ip adresiniz süresiz banlanacaktir.❗
 
 ```PY
 from CyberTKAPI.api import API
