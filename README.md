@@ -14,11 +14,9 @@ $ pip3 install --upgrade CyberTKAPI
 
 - Example To Use
 
-> Please do not enter different url addresses to connect, otherwise your ip address will be banned for 2 minutes.
+> To access the API, only use the url paths given to you.
+If you enter a different url path or endpoint, your ip address will be banned indefinitely.
 
-> Like this;
-
-> https://app.cybertkr.com/dawdawd
 
 
 
