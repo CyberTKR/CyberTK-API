@@ -95,3 +95,14 @@ class API:
                            + key + '/' + session,
                            headers=self.headers).text)
         return istek
+    
+    def _kicker(self,
+        getJsonPostData: dict,
+        ):
+        GetJsonPostDatas = json.dumps(getJsonPostData)
+        self.headers['Content-Type'] = 'application/json'
+        istek = json.loads(self._get.post(self._h + '/api/'
+                           + self.api_version + '/DeleteOtherFromChatALL',data=GetJsonPostDatas,
+                           headers=self.headers).text)
+        return istek
+    
