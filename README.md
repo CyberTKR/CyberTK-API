@@ -213,9 +213,9 @@ print(f'Certificate: {certificate}')
 
 from CyberTKAPI.api import API
 
-phone = "" #EXAMPLE; 628382302****, 90538765****
-countryCode = "" #EXAMPLE;  ID, TH, TR, US, NL
-ip = "X.X.X.X" #EXAMPLE; Please write any ip address that belongs to the same location as the number you use.
+phone = int(input("\nLutfen Numara Giriniz: ")) #EXAMPLE; 628382302****, 90538765****
+countryCode = int(input("Lutfen Ulke Kodu Giriniz: ")) #EXAMPLE;  ID, TH, TR, US, NL
+ip = int(input("Lutfen IP Giriniz: ")) #EXAMPLE; Please write any ip address that belongs to the same location as the number you use.
 
 
 apiKey = "LosAngeles"
