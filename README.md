@@ -207,7 +207,8 @@ print(f'authToken: {authToken}')
 print(f'Certificate: {certificate}')
     
 ##########################
-
+```
+```PY
 ####### LineRegisterPrimary #######
 
 from CyberTKAPI.api import API
