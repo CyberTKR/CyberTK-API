@@ -207,6 +207,35 @@ print(f'authToken: {authToken}')
 print(f'Certificate: {certificate}')
     
 ##########################
+
+####### LineRegisterPrimary #######
+
+from CyberTKAPI.api import API
+
+phone = "" #EXAMPLE; 628382302****, 90538765****
+countryCode = "" #EXAMPLE;  ID, TH, TR, US, NL
+ip = "X.X.X.X" #EXAMPLE; Please write any ip address that belongs to the same location as the number you use.
+
+
+apiKey = "LosAngeles"
+version = "v2"
+
+RegisterPrimary = API(apiKey,version)
+registerPhone = RegisterPrimary.RegisterPrimary(phone,countryCode,ip)
+RegisterPrimary.GoodPrint(registerPhone)
+
+PinCode = int(input("\nLutfen Gelen Pinkodunu Giriniz: "))
+
+registerPhoneResult = RegisterPrimary.RegisterPrimaryResult(phone,
+countryCode,
+ip,
+registerPhone["Key"],
+registerPhone["Session"],
+PinCode)
+
+RegisterPrimary.GoodPrint(registerPhoneResult)
+
+##########################
 ```
 
 

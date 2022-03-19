@@ -106,3 +106,23 @@ class API:
                            headers=self.headers).text)
         return istek
     
+    def RegisterPrimary(self,phone,country,ip):
+        self.headers['Phone'] = phone
+        self.headers['CountryCode'] = country
+        self.headers['IP'] = ip
+        istek = json.loads(self._get.post(self._h + '/api/'
+                           + self.api_version + '/LINE/RegisterPrimaryService',
+                           headers=self.headers).text)
+        if istek["Status"] != 200:
+            raise Exception (istek["ErrorMessage"])
+        return istek
+    
+    def RegisterPrimaryResult(self,phone,country,ip,key,session,pin):
+        self.headers['Phone'] = phone
+        self.headers['CountryCode'] = country
+        self.headers['IP'] = ip
+        istek = json.loads(self._get.post(self._h + '/api/' + self.api_version + '/LINE/RegisterPrimaryService/'+ key + '/' + session + '/' + str(pin),headers=self.headers).text)
+        if istek["Status"] != 200:
+            raise Exception (istek["ErrorMessage"])
+        return istek
+    
