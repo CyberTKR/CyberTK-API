@@ -13,6 +13,7 @@ class API:
         self.api_version = Version
         self.api_versionFloat = "2.7"
         self.headers = {'ApiKey': self.api_key,'API-Version': self.api_version}
+        self.CheckApiUpdate()
 
     def CheckApiUpdate(self):
         ver = self._get.get("https://github.com/CyberTKR/CyberTK-API/blob/master/CyberTKAPI/__version__").text.replace("\n"," ").replace(" ","")
