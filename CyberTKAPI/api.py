@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import httpx
-import json
+import httpx,json,sys
 
 
 class API:
@@ -16,10 +15,10 @@ class API:
         self.CheckApiUpdate()
 
     def CheckApiUpdate(self):
-        ver = self._get.get("https://github.com/CyberTKR/CyberTK-API/blob/master/CyberTKAPI/__version__").text.replace("\n"," ").replace(" ","")
-        print(ver)
-        if str(ver) != self.api_versionFloat:
+        VersionCheck = self._get.get("https://raw.githubusercontent.com/CyberTKR/CyberTK-API/master/CyberTKAPI/__version__").text.replace("\n"," ").replace(" ","")
+        if str(VersionCheck) != self.api_versionFloat:
             print("\n\nPlease update the API : https://github.com/CyberTKR/CyberTK-API/\n\n")
+            sys.exit()
             
     def GoodPrint(self, jsonpack):
         print(json.dumps(jsonpack, indent=4,ensure_ascii=False))
