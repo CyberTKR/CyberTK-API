@@ -10,7 +10,7 @@ class API:
         self._get = httpx.Client(http2=True, timeout=120)
         self.api_key = ApiKey
         self.api_version = Version
-        self.api_versionFloat = "2.8"
+        self.api_versionFloat = "2.7"
         self.headers = {'ApiKey': self.api_key,'API-Version': self.api_version}
         self.CheckApiUpdate()
 
