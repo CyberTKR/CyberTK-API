@@ -44,7 +44,7 @@ class API:
 
     def _instaprofile(self, username):
         istek = self._get.post(self._h + '/' + self.api_version
-                               + '/instagraminstasearch?Parameters='
+                               + '/instagramapi/instasearch?Parameters='
                                 + username, headers=self.headers).json()
         return istek
 
