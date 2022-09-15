@@ -10,7 +10,7 @@ class API:
         self._get = httpx.Client(http2=True, timeout=120)
         self.api_key = ApiKey
         self.api_version = Version
-        self.api_versionFloat = "2.9.1"
+        self.api_versionFloat = "2.9.2"
         self.headers = {'ApiKey': self.api_key,'API-Version': self.api_version}
         self.CheckApiUpdate()
 
@@ -79,8 +79,21 @@ class API:
         key,
         session,
         appname,
+        userAgent
+        ):
+        self.headers['AppName'] = appname
+        self.headers['UserAgent'] = userAgent
+        istek = json.loads(self._get.post(self._h + '/'
+                           + self.api_version + '/Pincode' + '/' + key
+                           + '/' + session, headers=self.headers).text)
+        return istek
+    def _lineVerifyCerTificate(
+        self,
+        key,
+        session,
+        appname,
         userAgent,
-        cert=None
+        cert
         ):
         self.headers['AppName'] = appname
         self.headers['UserAgent'] = userAgent
@@ -88,10 +101,9 @@ class API:
           self.headers['Certificate'] = cert
           print(cert)
         istek = json.loads(self._get.post(self._h + '/'
-                           + self.api_version + '/Pincode' + '/' + key
+                           + self.api_version + '/VerifyCertificate' + '/' + key
                            + '/' + session, headers=self.headers).text)
         return istek
-
     def _lineauthToken(
         self,
         key,
