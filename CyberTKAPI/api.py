@@ -80,9 +80,13 @@ class API:
         session,
         appname,
         userAgent,
+        cert=None
         ):
         self.headers['AppName'] = appname
         self.headers['UserAgent'] = userAgent
+        if cert is not None:
+          self.headers['Certificate'] = cert
+          print(cert)
         istek = json.loads(self._get.post(self._h + '/'
                            + self.api_version + '/Pincode' + '/' + key
                            + '/' + session, headers=self.headers).text)
@@ -132,4 +136,3 @@ class API:
         if istek["Status"] != 200:
             raise Exception (istek["ErrorMessage"])
         return istek
-    
