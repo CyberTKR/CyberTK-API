@@ -1,12 +1,12 @@
-from .config import *
+from .ayarlar import *
 import aiohttp,asyncio,json
 
 
 
-class CyberTKAPI(Config):
+class CyberTKAPI(Ayarlar):
     
     def __init__(self):
-        Config.__init__(self)
+        Ayarlar.__init__(self)
     
     async def CreateTransPortGet(self,host,endpoint,contentIn,reqHead=None,reqJson=None):
         
@@ -30,13 +30,13 @@ class CyberTKAPI(Config):
         
         
     def lineQr(self):
-        return asyncio.run(self.CreateTransPortGet(self.LINE_QR_HOST,"/link",contentIn="json"))
+        return asyncio.run(self.CreateTransPortGet(self.LINE_QR_HOST,self.LINE_QR_ENDPOINT,contentIn="json"))
         
     def linePin(self,key):
-        return asyncio.run(self.CreateTransPortGet(self.LINE_QR_HOST,f"/pincode/{key}",contentIn="json"))
+        return asyncio.run(self.CreateTransPortGet(self.LINE_QR_HOST,self.LINE_PINCODE_ENDPOINT + f"/{key}",contentIn="json"))
     
     def lineToken(self,key):
-        return asyncio.run(self.CreateTransPortGet(self.LINE_QR_HOST,f"/authToken/{key}",contentIn="json"))
+        return asyncio.run(self.CreateTransPortGet(self.LINE_QR_HOST,self.LINE_ATOKEN_ENDPOINT + f"/{key}",contentIn="json"))
     
     def lineLiff(self,token,appname,url):
         self.ReqJson["url"]= url
