@@ -43,5 +43,4 @@ class CyberTKAPI(Config):
         self.ReqJson["token"] = token
         self.ReqJson["appname"]= appname
         self.ReqJson["Content-Type"] = 'application/json'
-        print(self.ReqJson)
         return asyncio.run(self.CreateTransPortGet(self.LINE_LIFF_HOST,f"/liffapproval",contentIn="text",reqHead=self.ReqHead,reqJson=self.ReqJson))
