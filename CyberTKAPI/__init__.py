@@ -1,4 +1,4 @@
-from .api import API
+from .client import CyberTKAPI
 
 
-__all__ = ['API']
+__all__ = ["CyberTKAPI"]
