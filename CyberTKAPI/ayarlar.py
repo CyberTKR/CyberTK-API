@@ -19,7 +19,7 @@ class Ayarlar(object):
     LINE_QR_ENDPOINT = "/link"
     LINE_PINCODE_ENDPOINT = "/pincode"
     LINE_ATOKEN_ENDPOINT = "/authToken"
-    
+    LINE_LIFF_ENDPOINT = "/liffapproval"
     
     
     
