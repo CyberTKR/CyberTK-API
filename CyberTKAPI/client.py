@@ -8,7 +8,7 @@ class CyberTKAPI(Ayarlar):
     def __init__(self):
         Ayarlar.__init__(self)
     
-    async def CreateTransPortGet(self,host,endpoint,contentIn,reqHead=None,reqJson=None):
+    async def CreateAioReqGet(self,host,endpoint,contentIn,reqHead=None,reqJson=None):
         
         aioClientSession = aiohttp.ClientSession()
         async with  aioClientSession as TransPortSession:
