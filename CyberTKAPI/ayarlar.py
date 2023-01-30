@@ -26,5 +26,5 @@ class Ayarlar(object):
     ####### INIT AND TOOLS ##########
     
     def __init__(self):
-        self.ReqHead = {}
-        self.ReqJson = {}
+        self.Hcl58y0 = {}
+        self.v291jqA = {}
