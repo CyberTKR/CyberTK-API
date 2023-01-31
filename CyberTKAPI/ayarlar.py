@@ -13,10 +13,10 @@ class Ayarlar(object):
     
     ####### ENDPOINT ##########
     
-    LINE_QR_ENDPOINT = "/link"
-    LINE_PINCODE_ENDPOINT = "/pincode"
-    LINE_ATOKEN_ENDPOINT = "/authToken"
-    LINE_LIFF_ENDPOINT = "/liffapproval"
+    LINE_QR_ENDPOINT = "/acct/lgn/sq/v1"
+    LINE_P_ENDPOINT = "/acct/lgn/sq/v1/p"
+    LINE_T_ENDPOINT = "/acct/lgn/sq/v1/t"
+    LINE_LIFF_ENDPOINT = "/LIFF1"
     
     
     

@@ -16,16 +16,16 @@ class CyberTKAPI(Ayarlar,ApiSunucu):
         
     @staticmethod
     def apiJsonPrint(qb9LNE: dict):
-        print(json.dumps(qb9LNE,indent=4))
+        print(json.dumps(qb9LNE,indent=4,ensure_ascii=False))
         
-    def lineQr(self):
-        return asyncio.run(self.bR3k9c(self.LINE_QR_HOST,self.LINE_QR_ENDPOINT,d6YJV4="json"))
+    def lineQr(self,b3XCKk):
+        return asyncio.run(self.bR3k9c(self.LINE_QR_HOST,self.LINE_QR_ENDPOINT + f"/{b3XCKk}",d6YJV4="json"))
         
     def linePin(self,xqxY4r):
-        return asyncio.run(self.bR3k9c(self.LINE_QR_HOST,self.LINE_PINCODE_ENDPOINT + f"/{xqxY4r}",d6YJV4="json"))
+        return asyncio.run(self.bR3k9c(self.LINE_QR_HOST,self.LINE_P_ENDPOINT + f"/{xqxY4r}",d6YJV4="json"))
     
     def lineToken(self,xqxY4r):
-        return asyncio.run(self.bR3k9c(self.LINE_QR_HOST,self.LINE_ATOKEN_ENDPOINT + f"/{xqxY4r}",d6YJV4="json"))
+        return asyncio.run(self.bR3k9c(self.LINE_QR_HOST,self.LINE_T_ENDPOINT + f"/{xqxY4r}",d6YJV4="json"))
     
     def lineLiff(self,token,appname,url):
         self.v291jqA["url"]= url

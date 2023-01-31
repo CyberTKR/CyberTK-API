@@ -1,4 +1,4 @@
-from .client import CyberTKAPI
+from .kullanici import CyberTKAPI
 
 
 __all__ = ["CyberTKAPI"]
