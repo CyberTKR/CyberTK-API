@@ -1,6 +1,5 @@
 
 
-
 class Ayarlar(object):
     
     
@@ -8,8 +7,6 @@ class Ayarlar(object):
     
     LINE_QR_HOST = "https://qr.cybertkr.com"
     LINE_LIFF_HOST = "https://liff.cybertkr.com"
-    
-    
     
     
     
@@ -25,6 +22,5 @@ class Ayarlar(object):
     
     ####### INIT AND TOOLS ##########
     
-    def __init__(self):
-        self.Hcl58y0 = {}
-        self.v291jqA = {}
+    def __init__(self) -> None:
+        pass
