@@ -7,6 +7,7 @@ class Ayarlar(object):
     
     LINE_QR_HOST = "https://qr.cybertkr.com"
     LINE_LIFF_HOST = "https://liff.cybertkr.com"
+    DEPREM_HOST = "https://deprem.cybertkr.com"
     
     
     
@@ -17,6 +18,7 @@ class Ayarlar(object):
     LINE_P_ENDPOINT = "/acct/lgn/sq/v1/p"
     LINE_T_ENDPOINT = "/acct/lgn/sq/v1/t"
     LINE_LIFF_ENDPOINT = "/LIFF1"
+    DEPREM_ENDPOINT = "/canli-deprem"
     
     
     
